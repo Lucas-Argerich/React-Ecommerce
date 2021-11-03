@@ -15,6 +15,7 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
+import CartWidget from './cartWidget';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -185,12 +186,8 @@ export default function NavBar() {
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>
+          <CartWidget/>
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="error">
-                <MailIcon />
-              </Badge>
-            </IconButton>
             <IconButton
               size="large"
               aria-label="show 17 new notifications"
