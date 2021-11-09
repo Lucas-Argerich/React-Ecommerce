@@ -1,20 +1,17 @@
-import { Component } from "react";
+import React, { Component } from 'react'
+import Greeting from './greeting'
+import ItemCount from './itemCount'
+import './index.scss'
 
-class ItemListContainer extends Component {
-constructor(props) {
-    super(props)
-    this.state = {
-         name: "Christian"
-    };
-}
-
+export class ItemListContainer extends Component {
     render() {
-        return(
-        <div className="greeting">
-            <h1>Hello, {this.state.name} 😉</h1>
-        </div>
-        );
+        return (
+            <main>
+                <Greeting/>
+                <ItemCount/>
+            </main>
+        )
     }
 }
 
-export default ItemListContainer;
+export default ItemListContainer
