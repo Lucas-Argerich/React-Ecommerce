@@ -1,0 +1,15 @@
+import React from 'react'
+import './index.scss'
+
+export default function Item(props) {
+    return (
+        <div className="itemContainer">
+            <img src={props.image} />
+            <div className="itemContainerBottom">
+                <h3>{props.title}</h3>
+                <h4>${props.price}</h4>
+            </div>
+        </div>
+    )
+}
+
