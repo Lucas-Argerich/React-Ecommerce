@@ -1,3 +1,9 @@
-main {
-    padding: 0 200px
+main, nav {
+    width: 100%;
+    @media (min-width:1024px) {
+        padding: 0 100px;
+    }
+    @media (min-width:1440px){
+        padding: 0 200px;
+    }
 }

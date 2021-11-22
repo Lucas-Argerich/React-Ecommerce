@@ -1,16 +1,24 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
+import { IoMenuOutline } from 'react-icons/io5'
 import { FiSearch } from 'react-icons/fi'
 import { BsCart2 } from 'react-icons/bs'
+import MediaQuery from 'react-responsive'
 import brandIcon from './brandIcon.svg'
 import './index.scss'
 
-export default class NavBar extends Component {
-  render() {
-    return (
-      <nav>
+export default function NavBar() {
 
-        <div className="navLeft">
+  const [brgToggle, setBrgToggle] = useState(false)
+  
+
+  return (
+    <nav>
+      <div className="navLeft">
+        <div className={`navLeftTop${brgToggle ? " showMenu" : ""}`}>
+          <IoMenuOutline className="fiMenu" onClick={() => setBrgToggle(!brgToggle)} />
           <img src={brandIcon} alt="Brand Icon" />
+        </div>
+        <div className="navLeftBottom">
           <ul>
             <li>
               <a href="">WOMEN</a>
@@ -23,16 +31,18 @@ export default class NavBar extends Component {
             </li>
           </ul>
         </div>
+      </div>
 
-        <div className="navRight">
-          <div className="searchContainer">
-            <input type="text" placeholder="Search for items" />
-            <FiSearch className="fiSearch" />
-          </div>
-          <BsCart2 className="bsCart2" />
+      { !brgToggle &&(<div className="navRight">
+        <div className="searchContainer">
+          <input type="text" placeholder="Search for items" />
+          <FiSearch className="fiSearch" />
         </div>
+        <MediaQuery minWidth={768}>
+          <BsCart2 className="bsCart2" />
+        </MediaQuery>
+      </div>)}
 
-      </nav>
-    )
-  }
+    </nav>
+  )
 }

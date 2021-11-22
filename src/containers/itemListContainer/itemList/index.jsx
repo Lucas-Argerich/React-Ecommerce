@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import Item from './item'
+import Carousel from 'react-multi-carousel'
+import 'react-multi-carousel/lib/styles.css'
 import './index.scss'
+
 
 export default function ItemList() {
 
@@ -54,7 +57,30 @@ export default function ItemList() {
             }
         }
     ]
-const [data, setData] = useState([])
+
+    const responsive = {
+        superLargeDesktop: {
+            breakpoint: { max: 4000, min: 3000 },
+            items: 5
+        },
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 3,
+            slidesToSlide: 3
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 2,
+            slidesToSlide: 2
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1,
+            slidesToSlide: 1
+        }
+    }
+
+    const [data, setData] = useState([])
     const getData = () => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
@@ -64,14 +90,19 @@ const [data, setData] = useState([])
     }
 
     async function fetchData() {
-       setData(await getData())
+        setData(await getData())
     }
 
     fetchData()
 
     return (
-        <div className="itemList">
-        {data.map( i => <Item key={i.id} title={i.title} price={i.price} image={i.image} description={i.description} />)}
-        </div>
+
+        <Carousel className="itemList"
+            responsive={responsive}
+            centerMode={true}
+            infinite={true}>
+            {data.map(i => <Item key={i.id} title={i.title} price={i.price} image={i.image} description={i.description} />)}
+        </Carousel>
+
     )
 }

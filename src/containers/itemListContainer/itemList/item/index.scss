@@ -1,27 +1,46 @@
-.itemContainer{
+.itemContainer {
     overflow: hidden;
-    min-width: 250px;
-    width: 250px;
-    height: 450px;
     margin: 20px;
     padding: 20px;
     box-shadow: 0 0 5px #00000020;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-        
-    img{
-        object-fit:contain;
-        height: 300px;
-        width: 210px;
+    min-width: 120px;
+    width: 150px;
+    height: 250px;
+
+    img {
+        object-fit: contain;
     }
-    h3{
+
+    h3 {
         text-align: left;
-        font-size: 1.6rem;
+        font-size: 1.2rem;
     }
-    h4{
+
+    h4 {
         text-align: left;
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         font-weight: 500;
+    }
+
+    @media (min-width:768px) {
+
+        min-width: 250px;
+        width: 250px;
+        height: 450px;
+
+        img {
+            object-fit: contain;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+        }
+
+        h4 {
+            font-size: 1.6rem;
+        }
     }
 }
