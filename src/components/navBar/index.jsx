@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import { IoMenuOutline } from 'react-icons/io5'
 import { FiSearch } from 'react-icons/fi'
 import { BsCart2 } from 'react-icons/bs'
@@ -21,13 +22,13 @@ export default function NavBar() {
         <div className="navLeftBottom">
           <ul>
             <li>
-              <a href="">WOMEN</a>
+              <Link to="/women">WOMEN</Link>
             </li>
             <li>
-              <a href="">MEN</a>
+              <Link to="/men">MEN</Link>
             </li>
             <li>
-              <a href="">KIDS</a>
+              <Link to="/kids">KIDS</Link>
             </li>
           </ul>
         </div>

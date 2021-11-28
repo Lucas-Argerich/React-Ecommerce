@@ -48,7 +48,7 @@
   font-weight: normal;
 }
 
-input{
+input {
   border: none;
   background: transparent;
 }
@@ -63,6 +63,14 @@ html {
   font-size: 62.5%;
 }
 
-.App {
-  overflow: hidden;
+main {
+  width: 100%;
+
+  @media (min-width:1024px) {
+    padding: 0 100px;
+  }
+
+  @media (min-width:1440px) {
+    padding: 0 200px;
+  }
 }
