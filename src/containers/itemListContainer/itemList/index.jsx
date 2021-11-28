@@ -61,7 +61,8 @@ export default function ItemList() {
     const responsive = {
         superLargeDesktop: {
             breakpoint: { max: 4000, min: 3000 },
-            items: 5
+            items: 5,
+            slidesToSlide: 5
         },
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
