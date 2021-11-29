@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/React-Ecommerce/static/css/main.a9af4870.chunk.css",
-    "main.js": "/React-Ecommerce/static/js/main.508753ee.chunk.js",
-    "main.js.map": "/React-Ecommerce/static/js/main.508753ee.chunk.js.map",
-    "runtime-main.js": "/React-Ecommerce/static/js/runtime-main.1b92de92.js",
-    "runtime-main.js.map": "/React-Ecommerce/static/js/runtime-main.1b92de92.js.map",
-    "static/css/2.55a905a9.chunk.css": "/React-Ecommerce/static/css/2.55a905a9.chunk.css",
-    "static/js/2.00311030.chunk.js": "/React-Ecommerce/static/js/2.00311030.chunk.js",
-    "static/js/2.00311030.chunk.js.map": "/React-Ecommerce/static/js/2.00311030.chunk.js.map",
+    "main.css": "/React-Ecommerce/static/css/main.c17233bd.chunk.css",
+    "main.js": "/React-Ecommerce/static/js/main.3b6ed3b4.chunk.js",
+    "main.js.map": "/React-Ecommerce/static/js/main.3b6ed3b4.chunk.js.map",
+    "runtime-main.js": "/React-Ecommerce/static/js/runtime-main.51862d1e.js",
+    "runtime-main.js.map": "/React-Ecommerce/static/js/runtime-main.51862d1e.js.map",
+    "static/css/2.86f015aa.chunk.css": "/React-Ecommerce/static/css/2.86f015aa.chunk.css",
+    "static/js/2.64591edc.chunk.js": "/React-Ecommerce/static/js/2.64591edc.chunk.js",
+    "static/js/2.64591edc.chunk.js.map": "/React-Ecommerce/static/js/2.64591edc.chunk.js.map",
     "index.html": "/React-Ecommerce/index.html",
-    "static/css/2.55a905a9.chunk.css.map": "/React-Ecommerce/static/css/2.55a905a9.chunk.css.map",
-    "static/css/main.a9af4870.chunk.css.map": "/React-Ecommerce/static/css/main.a9af4870.chunk.css.map",
-    "static/js/2.00311030.chunk.js.LICENSE.txt": "/React-Ecommerce/static/js/2.00311030.chunk.js.LICENSE.txt",
+    "static/css/2.86f015aa.chunk.css.map": "/React-Ecommerce/static/css/2.86f015aa.chunk.css.map",
+    "static/css/main.c17233bd.chunk.css.map": "/React-Ecommerce/static/css/main.c17233bd.chunk.css.map",
+    "static/js/2.64591edc.chunk.js.LICENSE.txt": "/React-Ecommerce/static/js/2.64591edc.chunk.js.LICENSE.txt",
     "static/media/brandIcon.e2a06500.svg": "/React-Ecommerce/static/media/brandIcon.e2a06500.svg",
     "static/media/styles.css": "/React-Ecommerce/static/media/revicons.e8746a62.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.1b92de92.js",
-    "static/css/2.55a905a9.chunk.css",
-    "static/js/2.00311030.chunk.js",
-    "static/css/main.a9af4870.chunk.css",
-    "static/js/main.508753ee.chunk.js"
+    "static/js/runtime-main.51862d1e.js",
+    "static/css/2.86f015aa.chunk.css",
+    "static/js/2.64591edc.chunk.js",
+    "static/css/main.c17233bd.chunk.css",
+    "static/js/main.3b6ed3b4.chunk.js"
   ]
 }
