@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Item from './item'
 import Carousel from 'react-multi-carousel'
-import { Routes } from 'react-router'
 import 'react-multi-carousel/lib/styles.css'
 import './index.scss'
 
