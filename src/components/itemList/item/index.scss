@@ -1,8 +1,7 @@
 .itemContainer {
     overflow: hidden;
     margin: 20px;
-    padding: 20px;
-    box-shadow: 0 0 5px #00000020;
+    padding: 16px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -10,14 +9,22 @@
     width: 150px;
     min-height: 250px;
     height: 250px;
+    user-select: none;
+    transition: ease-out 200ms;
+
+    &:hover {
+        box-shadow: (0px 4px 35px rgba(168, 172, 176, 0.25));
+    }
 
     .imageContainer {
+        background-color: var(--c-light-variant);
         width: 140px;
-        min-height: 180px;
-        height: 180px;
+        min-height: 170px;
+        height: 170px;
         overflow: hidden;
         display: flex;
         justify-content: center;
+        filter: brightness(0.975);
 
         img {
             object-fit: contain;
@@ -27,15 +34,17 @@
     }
 
     .itemContainerBottom {
+        margin-top: 15px;
         height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
 
         h3 {
             text-align: left;
             font-size: 1.2rem;
             overflow: hidden;
+            white-space: nowrap;
         }
 
         h4 {
@@ -49,24 +58,24 @@
 
     @media (min-width:768px) {
 
-        min-width: 250px;
-        width: 250px;
-        min-height: 450px;
-        height: 450px;
+        min-width: 256px;
+        width: 256px;
+        min-height: 467px;
+        height: 467px;
 
         .imageContainer {
-            width: 210px;
-            min-height: 340px;
-            height: 340px;
+            width: 224px;
+            min-height: 330px;
+            height: 330px;
         }
 
         .itemContainerBottom {
             h3 {
-                font-size: 1.6rem;
+                font-size: 1.8rem;
             }
 
             h4 {
-                font-size: 1.6rem;
+                font-size: 1.8rem;
             }
         }
 

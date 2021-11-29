@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
+import ItemList from '../../components/itemList'
 
 export default class Men extends Component {
     render() {
         return (
-            <div>
-                Men
-            </div>
+            <main>
+                <ItemList title="Bestsellers" />
+            </main>
         )
     }
 }

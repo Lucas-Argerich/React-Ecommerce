@@ -1,9 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './index.scss'
 
 export default function Item(props) {
     return (
-        <div className="itemContainer">
+        <Link to={`/item/${props.id}`}>
+            <div className="itemContainer">
             <div className="imageContainer">
                 <img src={props.image} />
             </div>
@@ -12,6 +14,7 @@ export default function Item(props) {
                 <h4>${props.price}</h4>
             </div>
         </div>
+        </Link>
     )
 }
 
