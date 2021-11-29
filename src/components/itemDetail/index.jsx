@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
+import ReactLoading from 'react-loading';
+import './index.scss'
 
 export default function ItemDetail() {
     const { productId } = useParams()
     const [item, setItem] = useState([])
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         fetchItem()
@@ -12,6 +15,7 @@ export default function ItemDetail() {
 
     async function fetchItem() {
         setItem(await getItem())
+        setLoading(false)
     }
 
     const getItem = () => {
@@ -24,24 +28,28 @@ export default function ItemDetail() {
         })
     }
 
-
-
     return (
-        <div className="itemDetailContainer">
-            <div className="productGallery">
-                <img src={item.image} style={{ width: "20%" }} />
+        loading ?
+            <ReactLoading className="bubbleLoader" type={"bubbles"} color={"var(--c-primary)"} height={'15%'} width={'15%'} /> :
+            <div className="itemDetailContainer">
+                <div className="productGallery">
+                    <img src={item.image} />
+                </div>
+                <div className="productInfo">
+                    <h2>{item.title}</h2>
+                    <div className="productPriceRateInline">
+                        <h3>${item.price}</h3>
+                        {/* {item.rating} */}
+                    </div>
+                    <p>{item.description}</p>
+                    <select>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                    </select>
+                </div>
             </div>
-            <div className="productInfo">
-                <h2>{item.title}</h2>
-                <h3>${item.price}</h3>
-                <p>{item.description}</p>
-                <select>
-                    <option>S</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                </select>
-            </div>
-        </div>
+
     )
 }

@@ -1,0 +1,48 @@
+.bubbleLoader{
+    align-self: center;
+    margin-top: 40px;
+}
+
+.itemDetailContainer {
+    min-height: 900px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+
+    .productGallery {
+        width: 40%;
+
+        img {
+            width: 100%;
+            height: inherit;
+            object-fit: contain;
+        }
+    }
+
+    .productInfo {
+        width: 45%;
+        h2 {
+            text-align: left;
+            font-size: 2.6rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .productPriceRateInline{
+            min-height: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+            h3{
+                font-size: 1.8rem;
+                font-weight: 500;
+            }
+        }
+
+        p{
+            font-size: 1.6rem;
+            text-align: left;
+        }
+    }
+}
