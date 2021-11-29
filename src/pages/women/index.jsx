@@ -4,6 +4,7 @@ export default class Women extends Component {
     render() {
         return (
             <main>
+            women
             </main>
         )
     }
