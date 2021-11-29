@@ -31,6 +31,14 @@ export default function ItemList(props) {
 
     const [data, setData] = useState([])
 
+    useEffect(() => {
+        fetchData()
+    }, [])
+
+    async function fetchData() {
+        setData(await getData())
+    }
+
     const getData = () => {
         return new Promise((resolve, reject) => {
             resolve(
@@ -41,15 +49,6 @@ export default function ItemList(props) {
         })
     }
 
-    async function fetchData() {
-        setData(await getData())
-    }
-
-    useEffect(() => {
-        fetchData()
-    }, [])
-
-
     return (
         <div className="itemListContainer">
             <h2 className="itemListTitle">{props.title}</h2>
@@ -58,7 +57,7 @@ export default function ItemList(props) {
                 responsive={responsive}
                 centerMode={false}
                 infinite={true} >
-                {data.map(i => <Item key={i.id} title={i.title} price={i.price} image={i.image} rating={i.rating} category={i.category} description={i.description} />)}
+                {data.map(i => <Item key={i.id} id={i.id} title={i.title} price={i.price} image={i.image} rating={i.rating} category={i.category} description={i.description} />)}
             </Carousel>
         </div>
     )

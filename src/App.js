@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Men from './pages/men';
 import Women from './pages/women';
 import Kids from './pages/kids';
+import Product from './pages/product';
 import './app.scss'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/men" element={<Men />} />
         <Route path="/women" element={<Women />} />
         <Route path="/kids" element={<Kids />} />
+        <Route path="/product/:productId" element={<Product />} />
         {/*<Route path="cart" element={<Cart />} />*/}
       </Routes>
     </Router>
