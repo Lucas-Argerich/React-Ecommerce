@@ -22,13 +22,13 @@ export default function NavBar() {
         <div className="navLeftBottom">
           <ul>
             <li>
-              <Link to="/women">WOMEN</Link>
+              <Link to="React-Ecommerce/women">WOMEN</Link>
             </li>
             <li>
-              <Link to="/men">MEN</Link>
+              <Link to="React-Ecommerce/men">MEN</Link>
             </li>
             <li>
-              <Link to="/kids">KIDS</Link>
+              <Link to="React-Ecommerce/kids">KIDS</Link>
             </li>
           </ul>
         </div>

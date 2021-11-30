@@ -24,7 +24,7 @@ export default function ItemCount(props) {
                 <button onClick={onAdd}><AiOutlinePlus /></button>
             </div>
             <div className="itemCountAddCart">
-                <Link to="/cart">
+                <Link to="React-Ecommerce/cart">
                     <button>Add To Cart</button>
                 </Link>
             </div>

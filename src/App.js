@@ -12,15 +12,16 @@ function App() {
     <Router>
       <NavBar />
       <Routes>
-        <Route exact path="*" element={<Navigate to="/women" />} />
-        <Route path="/men" element={<Men />} />
-        <Route path="/women" element={<Women />} />
-        <Route path="/kids" element={<Kids />} />
-        <Route path="/product/:productId" element={<Product />} />
-        <Route path="cart" element={<Cart />} />
+        <Route exact path="*" element={<Navigate to="/React-Ecommerce/women" />} />
+        <Route path="/React-Ecommerce/men" element={<Men />} />
+        <Route path="/React-Ecommerce/women" element={<Women />} />
+        <Route path="/React-Ecommerce/kids" element={<Kids />} />
+        <Route path="/React-Ecommerce/product/:productId" element={<Product />} />
+        <Route path="/React-Ecommerce/cart" element={<Cart />} />
       </Routes>
     </Router>
   );
 }
+
 
 export default App;
