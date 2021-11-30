@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/React-Ecommerce/static/css/main.7c6cabd2.chunk.css",
-    "main.js": "/React-Ecommerce/static/js/main.cf0f2dc2.chunk.js",
-    "main.js.map": "/React-Ecommerce/static/js/main.cf0f2dc2.chunk.js.map",
+    "main.css": "/React-Ecommerce/static/css/main.4f5f4d16.chunk.css",
+    "main.js": "/React-Ecommerce/static/js/main.28d06852.chunk.js",
+    "main.js.map": "/React-Ecommerce/static/js/main.28d06852.chunk.js.map",
     "runtime-main.js": "/React-Ecommerce/static/js/runtime-main.51862d1e.js",
     "runtime-main.js.map": "/React-Ecommerce/static/js/runtime-main.51862d1e.js.map",
     "static/css/2.86f015aa.chunk.css": "/React-Ecommerce/static/css/2.86f015aa.chunk.css",
@@ -10,7 +10,7 @@
     "static/js/2.6a85751e.chunk.js.map": "/React-Ecommerce/static/js/2.6a85751e.chunk.js.map",
     "index.html": "/React-Ecommerce/index.html",
     "static/css/2.86f015aa.chunk.css.map": "/React-Ecommerce/static/css/2.86f015aa.chunk.css.map",
-    "static/css/main.7c6cabd2.chunk.css.map": "/React-Ecommerce/static/css/main.7c6cabd2.chunk.css.map",
+    "static/css/main.4f5f4d16.chunk.css.map": "/React-Ecommerce/static/css/main.4f5f4d16.chunk.css.map",
     "static/js/2.6a85751e.chunk.js.LICENSE.txt": "/React-Ecommerce/static/js/2.6a85751e.chunk.js.LICENSE.txt",
     "static/media/brandIcon.e2a06500.svg": "/React-Ecommerce/static/media/brandIcon.e2a06500.svg",
     "static/media/styles.css": "/React-Ecommerce/static/media/revicons.e8746a62.woff"
@@ -19,7 +19,7 @@
     "static/js/runtime-main.51862d1e.js",
     "static/css/2.86f015aa.chunk.css",
     "static/js/2.6a85751e.chunk.js",
-    "static/css/main.7c6cabd2.chunk.css",
-    "static/js/main.cf0f2dc2.chunk.js"
+    "static/css/main.4f5f4d16.chunk.css",
+    "static/js/main.28d06852.chunk.js"
   ]
 }
