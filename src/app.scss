@@ -48,15 +48,20 @@
   font-weight: normal;
 }
 
-input {
+input,
+button,
+select {
   border: none;
   background: transparent;
+  outline: none;
+  -webkit-appearance: none;
 }
 
 input:focus,
 textarea:focus,
 select:focus {
   outline: none;
+  border: none;
 }
 
 html {

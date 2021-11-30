@@ -1,4 +1,4 @@
-.bubbleLoader{
+.bubbleLoader {
     align-self: center;
     margin-top: 40px;
 }
@@ -10,7 +10,7 @@
     margin: 20px 0;
 
     .productGallery {
-        width: 40%;
+        width: 35%;
 
         img {
             width: 100%;
@@ -19,30 +19,63 @@
         }
     }
 
-    .productInfo {
+    .product {
+        display: flex;
+        flex-direction: column;
         width: 45%;
-        h2 {
-            text-align: left;
-            font-size: 2.6rem;
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
 
-        .productPriceRateInline{
-            min-height: 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 32px;
-            h3{
-                font-size: 1.8rem;
-                font-weight: 500;
+        .productInfo {
+            h2 {
+                text-align: left;
+                font-size: 2.6rem;
+                font-weight: 600;
+                margin-bottom: 16px;
+            }
+
+            .productPriceRateInline {
+                min-height: 40px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 32px;
+
+                h3 {
+                    font-size: 1.8rem;
+                    font-weight: 500;
+                }
+            }
+
+            p {
+                font-size: 1.6rem;
+                text-align: left;
             }
         }
 
-        p{
-            font-size: 1.6rem;
-            text-align: left;
+        .productCartData {
+            .selectContainer {
+                position: relative;
+                select {
+                    background: none;
+                    width: 100%;
+                    min-height: 30px;
+                    margin: 40px 0;
+                    border-bottom: 1px solid var(--c-light);
+                    cursor: pointer;
+
+                    option {
+                        text-align: left;
+                    }
+                }
+                .selectExpandIcon{
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                    right: 10px;
+                    z-index: -1;
+                }
+            }
+
         }
     }
+
 }

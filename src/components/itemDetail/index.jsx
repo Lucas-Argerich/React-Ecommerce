@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import ReactLoading from 'react-loading';
+import ItemCount from '../itemCount';
+import { BsChevronDown } from 'react-icons/bs'
 import './index.scss'
 
 export default function ItemDetail() {
@@ -35,19 +37,27 @@ export default function ItemDetail() {
                 <div className="productGallery">
                     <img src={item.image} />
                 </div>
-                <div className="productInfo">
-                    <h2>{item.title}</h2>
-                    <div className="productPriceRateInline">
-                        <h3>${item.price}</h3>
-                        {/* {item.rating} */}
+                <div className="product">
+                    <div className="productInfo">
+                        <h2>{item.title}</h2>
+                        <div className="productPriceRateInline">
+                            <h3>${item.price}</h3>
+                            {/* {item.rating} */}
+                        </div>
+                        <p>{item.description}</p>
                     </div>
-                    <p>{item.description}</p>
-                    <select>
-                        <option>S</option>
-                        <option>M</option>
-                        <option>L</option>
-                        <option>XL</option>
-                    </select>
+                    <div className="productCartData">
+                        <div className="selectContainer">
+                            <select>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                            <BsChevronDown className="selectExpandIcon" />
+                        </div>
+                        <ItemCount />
+                    </div>
                 </div>
             </div>
 

@@ -1,0 +1,41 @@
+.itemCountContainer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+
+    .itemCount {
+        width: 111px;
+        height: 52px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: var(--c-light);
+
+        button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            margin: 15px;
+        }
+
+        span {
+            font-size: 1.8rem;
+            margin-bottom: 6px;
+            user-select: none;
+        }
+    }
+
+    .itemCountAddCart {
+        button {
+            width: 197px;
+            height: 52px;
+            border: none;
+            background: var(--c-primary);
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--c-light-variant);
+        }
+    }
+}
