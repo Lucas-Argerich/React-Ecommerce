@@ -6,6 +6,7 @@ import { BsChevronDown } from 'react-icons/bs'
 import './index.scss'
 
 export default function ItemDetail() {
+
     const { productId } = useParams()
     const [item, setItem] = useState([])
     const [loading, setLoading] = useState(true);
@@ -13,7 +14,6 @@ export default function ItemDetail() {
     useEffect(() => {
         fetchItem()
     }, [productId])
-
 
     async function fetchItem() {
         setItem(await getItem())
@@ -31,8 +31,7 @@ export default function ItemDetail() {
     }
 
     return (
-        loading ?
-            <ReactLoading className="bubbleLoader" type={"bubbles"} color={"var(--c-primary)"} height={'15%'} width={'15%'} /> :
+        loading ? <ReactLoading className="bubbleLoader" type={"bubbles"} color={"var(--c-primary)"} height={'15%'} width={'15%'} /> :
             <div className="itemDetailContainer">
                 <div className="productGallery">
                     <img src={item.image} />
@@ -60,6 +59,5 @@ export default function ItemDetail() {
                     </div>
                 </div>
             </div>
-
     )
 }

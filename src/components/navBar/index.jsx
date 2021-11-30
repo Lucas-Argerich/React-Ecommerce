@@ -8,10 +8,9 @@ import brandIcon from './brandIcon.svg'
 import './index.scss'
 
 export default function NavBar() {
-
+  
   const [brgToggle, setBrgToggle] = useState(false)
   
-
   return (
     <nav>
       <div className="navLeft">
@@ -43,7 +42,6 @@ export default function NavBar() {
           <BsCart2 className="bsCart2" />
         </MediaQuery>
       </div>)}
-
     </nav>
   )
 }
