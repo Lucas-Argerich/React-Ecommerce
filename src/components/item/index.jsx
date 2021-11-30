@@ -4,7 +4,7 @@ import './index.scss'
 
 export default function Item(props) {
     return (
-        <Link to={`React-Ecommerce/product/${props.id}`}>
+        <Link to={`/React-Ecommerce/product/${props.id}`}>
             <div className="itemContainer">
             <div className="imageContainer">
                 <img src={props.image} />
