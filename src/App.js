@@ -11,7 +11,7 @@ function App() {
     <Router>
       <NavBar />
       <Routes>
-        {/* <Route exact path="*" element={<Navigate to="/men" />} /> */}
+        <Route exact path="*" element={<Navigate to="/women" />} />
         <Route path="/men" element={<Men />} />
         <Route path="/women" element={<Women />} />
         <Route path="/kids" element={<Kids />} />
