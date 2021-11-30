@@ -5,7 +5,7 @@ export default class Men extends Component {
     render() {
         return (
             <main>
-                <ItemList title="Bestsellers" />
+                <ItemList title="Bestsellers" category="men's clothing" />
             </main>
         )
     }

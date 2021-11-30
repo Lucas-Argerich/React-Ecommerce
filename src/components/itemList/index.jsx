@@ -42,7 +42,7 @@ export default function ItemList(props) {
     const getData = () => {
         return new Promise((resolve, reject) => {
             resolve(
-                fetch("https://fakestoreapi.com/products/category/men's%20clothing")
+                fetch(`https://fakestoreapi.com/products/category/${props.category}`)
                     .then(res => (res.ok ? res : reject(res)))
                     .then(res => res.json())
             )
