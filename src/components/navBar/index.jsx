@@ -8,15 +8,15 @@ import brandIcon from './brandIcon.svg'
 import './index.scss'
 
 export default function NavBar() {
-  
+
   const [brgToggle, setBrgToggle] = useState(false)
-  
+
   return (
     <nav>
       <div className="navLeft">
         <div className={`navLeftTop${brgToggle ? " showMenu" : ""}`}>
           <IoMenuOutline className="fiMenu" onClick={() => setBrgToggle(!brgToggle)} />
-          <img src={brandIcon} alt="Brand Icon" />
+          <Link to={"/"}><img src={brandIcon} alt="Brand Icon" /></Link>
         </div>
         <div className="navLeftBottom">
           <ul>
@@ -33,7 +33,7 @@ export default function NavBar() {
         </div>
       </div>
 
-      { !brgToggle &&(<div className="navRight">
+      {!brgToggle && (<div className="navRight">
         <div className="searchContainer">
           <input type="text" placeholder="Search for items" />
           <FiSearch className="fiSearch" />
