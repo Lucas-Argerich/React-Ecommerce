@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
+import { useCart } from '../../context/cartContext'
+import AddToCartButton from '../addToCartButton'
 import './index.scss'
 
 export default function ItemCount(props) {
 
     const [itemCount, setItemCount] = useState(1)
+    const cart = useCart()
 
     function onAdd() {
         setItemCount(itemCount + 1)
@@ -25,7 +28,7 @@ export default function ItemCount(props) {
             </div>
             <div className="itemCountAddCart">
                 <Link to="React-Ecommerce/cart">
-                    <button>Add To Cart</button>
+                    <AddToCartButton item={props.item} count={itemCount} />
                 </Link>
             </div>
         </div>

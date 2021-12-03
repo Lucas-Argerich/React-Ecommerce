@@ -8,7 +8,7 @@ import './index.scss'
 export default function ItemDetail() {
 
     const { productId } = useParams()
-    const [item, setItem] = useState([])
+    const [item, setItem] = useState({})
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -55,7 +55,7 @@ export default function ItemDetail() {
                             </select>
                             <BsChevronDown className="selectExpandIcon" />
                         </div>
-                        <ItemCount />
+                        <ItemCount item={item} />
                     </div>
                 </div>
             </div>
