@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import CartData from '../../components/cartData'
+import CartData from '../../components/cartList'
 
 export default class Cart extends Component {
     render() {
         return (
-            <div>
+            <main>
             <CartData />
-            </div>
+            </main>
         )
     }
 }

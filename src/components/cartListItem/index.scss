@@ -1,0 +1,47 @@
+.cartListItem {
+    min-width: 766px;
+    max-width: 60%;
+    min-height: 216px;
+    padding: 10px;
+    display: flex;
+
+    .itemImageContainer {
+        width: 140px;
+        height: 200px;
+        overflow: hidden;
+
+        img {
+            width: inherit;
+            height: inherit;
+            object-fit: cover;
+        }
+    }
+
+    .itemContent {
+        width: calc(100% - 140px);
+
+        .itemContentHeader {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            h4 {
+                padding-left: 20px;
+                font-size: 1.4rem;
+            }
+
+            svg {
+                transform: scale(1.6);
+            }
+        }
+
+        .itemContentData {
+            h5 {
+                font-size: 1.8rem;
+                font-weight: 500;
+                text-align: left;
+                padding: 40px 0 0 20px;
+            }
+        }
+    }
+}

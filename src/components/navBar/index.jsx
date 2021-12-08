@@ -39,7 +39,7 @@ export default function NavBar() {
           <FiSearch className="fiSearch" />
         </div>
         <MediaQuery minWidth={768}>
-          <BsCart2 className="bsCart2" />
+          <Link to="React-Ecommerce/cart"><BsCart2 className="bsCart2" /></Link>
         </MediaQuery>
       </div>)}
     </nav>
