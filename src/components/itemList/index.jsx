@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import Item from '../item'
-import Carousel from 'react-multi-carousel'
-import 'react-multi-carousel/lib/styles.css'
 import './index.scss'
 
 export default function ItemList(props) {
@@ -52,13 +50,9 @@ export default function ItemList(props) {
     return (
         <div className="itemListContainer">
             <h2 className="itemListTitle">{props.title}</h2>
-            <Carousel className="itemList"
-                itemClass="carouselListItem"
-                responsive={responsive}
-                centerMode={false}
-                infinite={true} >
+            <div className="itemList">
                 {data.map(i => <Item key={i.id} id={i.id} title={i.title} price={i.price} image={i.image} rating={i.rating} category={i.category} description={i.description} />)}
-            </Carousel>
+            </div>
         </div>
     )
 }
