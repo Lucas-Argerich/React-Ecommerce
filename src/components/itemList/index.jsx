@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Item from '../item'
+import ItemLoader from '../item/itemLoader'
 import './index.scss'
 
 export default function ItemList(props) {
@@ -28,6 +29,7 @@ export default function ItemList(props) {
     }
 
     const [data, setData] = useState([])
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         fetchData()
@@ -35,6 +37,7 @@ export default function ItemList(props) {
 
     async function fetchData() {
         setData(await getData())
+        setLoading(false)
     }
 
     const getData = () => {
@@ -50,8 +53,11 @@ export default function ItemList(props) {
     return (
         <div className="itemListContainer">
             <h2 className="itemListTitle">{props.title}</h2>
+
             <div className="itemList">
-                {data.map(i => <Item key={i.id} id={i.id} title={i.title} price={i.price} image={i.image} rating={i.rating} category={i.category} description={i.description} />)}
+                {loading ? <><ItemLoader /><ItemLoader /><ItemLoader /><ItemLoader /></> :
+                    data.map(i => <Item key={i.id} id={i.id} title={i.title} price={i.price} image={i.image} rating={i.rating} category={i.category} description={i.description} />)
+                }
             </div>
         </div>
     )
