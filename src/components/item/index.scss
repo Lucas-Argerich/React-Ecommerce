@@ -5,10 +5,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    min-width: 150px;
-    width: 150px;
-    min-height: 250px;
-    height: 250px;
+    min-width: 256px;
+    width: 256px;
+    min-height: 447px;
+    height: 447px;
+
     user-select: none;
     transition: ease-out 200ms;
 
@@ -18,9 +19,9 @@
 
     .imageContainer {
         background-color: var(--c-light-variant);
-        width: 140px;
-        min-height: 170px;
-        height: 170px;
+        width: 224px;
+        min-height: 330px;
+        height: 330px;
         overflow: hidden;
         display: flex;
         justify-content: center;
@@ -42,38 +43,15 @@
 
         h3 {
             text-align: left;
-            font-size: 1.2rem;
+            font-size: 1.8rem;
             overflow: hidden;
             white-space: nowrap;
         }
 
         h4 {
             text-align: left;
-            font-size: 1.3rem;
+            font-size: 1.8rem;
             font-weight: 500;
-        }
-    }
-
-    @media (min-width:768px) {
-        min-width: 256px;
-        width: 256px;
-        min-height: 447px;
-        height: 447px;
-
-        .imageContainer {
-            width: 224px;
-            min-height: 330px;
-            height: 330px;
-        }
-
-        .itemContainerBottom {
-            h3 {
-                font-size: 1.8rem;
-            }
-
-            h4 {
-                font-size: 1.8rem;
-            }
         }
     }
 }
