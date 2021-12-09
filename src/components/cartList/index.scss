@@ -1,8 +1,17 @@
-.cartList{
-    h2{
+.cartList {
+    min-width: 766px;
+    max-width: 60%;
+
+    h2 {
         font-size: 2.6rem;
         font-weight: 600;
         text-align: left;
         margin: 50px 0 35px;
+    }
+
+    h3{
+        font-size: 2rem;
+        margin-top: 100px;
+        text-align: left;
     }
 }
