@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import ReactLoading from 'react-loading';
-import ItemCount from '../itemCount';
+import ItemCountWithAdd from '../itemCountWithAdd';
 import { BsChevronDown } from 'react-icons/bs'
 import './index.scss'
 
@@ -55,7 +55,7 @@ export default function ItemDetail() {
                             </select>
                             <BsChevronDown className="selectExpandIcon" />
                         </div>
-                        <ItemCount item={item} />
+                        <ItemCountWithAdd item={item} />
                     </div>
                 </div>
             </div>

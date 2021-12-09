@@ -1,0 +1,27 @@
+.itemCountContainer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+
+    .itemCount {
+        width: 111px;
+        height: 52px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: var(--c-light);
+
+        button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            margin: 15px;
+        }
+
+        span {
+            font-size: 1.8rem;
+            margin-bottom: 6px;
+            user-select: none;
+        }
+    }
+}

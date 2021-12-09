@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 import { useCart } from '../../context/cartContext'
+import AddToCartButton from '../addToCartButton'
 import './index.scss'
 
 export default function ItemCount(props) {
@@ -23,6 +25,11 @@ export default function ItemCount(props) {
                 <button onClick={onSubtract}><AiOutlineMinus /></button>
                 <span>{itemCount}</span>
                 <button onClick={onAdd}><AiOutlinePlus /></button>
+            </div>
+            <div className="itemCountAddCart">
+                <Link to="React-Ecommerce/cart">
+                    <AddToCartButton item={props.item} count={itemCount} />
+                </Link>
             </div>
         </div>
     )
