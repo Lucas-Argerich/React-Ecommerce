@@ -6,7 +6,16 @@ import './index.scss'
 export default function ItemCount(props) {
 
     const [itemCount, setItemCount] = useState(1)
-    const cart = useCart()
+    const { setQuantity } = useCart()
+
+    useEffect(() => {
+        setItemCount(props.quantity)
+    }, [])
+    
+    useEffect(() => {
+        console.log(itemCount)
+        setQuantity(props.id, itemCount)
+    }, [itemCount])
 
     function onAdd() {
         setItemCount(itemCount + 1)

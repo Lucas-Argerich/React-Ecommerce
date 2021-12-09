@@ -35,11 +35,16 @@ export const CartProvider = ({ children }) => {
             const newAddedItems = cart.addedItems
             newAddedItems.find(i => i.item.id === item.item.id).quantity = newAddedItems.find(i => i.item.id === item.item.id).quantity + item.quantity
             setCart({ ...cart, addedItems: newAddedItems })
-        return
+            return
         }
 
         const newAddedItems = cart.addedItems
         newAddedItems.push(item)
+        setCart({ ...cart, addedItems: newAddedItems })
+    }
+    const setQuantity = (id, quantity) => {
+        const newAddedItems = cart.addedItems
+        newAddedItems.find(i => i.item.id === id).quantity = newAddedItems.find(i => i.item.id === id).quantity + quantity
         setCart({ ...cart, addedItems: newAddedItems })
     }
 
@@ -51,7 +56,7 @@ export const CartProvider = ({ children }) => {
     };
 
     return (
-        <CartContext.Provider value={{ cart, addItem, clear }}>
+        <CartContext.Provider value={{ cart, addItem, setQuantity, clear }}>
             {children}
         </CartContext.Provider>
     )
