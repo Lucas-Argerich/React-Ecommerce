@@ -44,7 +44,7 @@ export const CartProvider = ({ children }) => {
     }
     const setQuantity = (id, quantity) => {
         const newAddedItems = cart.addedItems
-        newAddedItems.find(i => i.item.id === id).quantity = newAddedItems.find(i => i.item.id === id).quantity + quantity
+        newAddedItems.find(i => i.item.id === id).quantity = quantity
         setCart({ ...cart, addedItems: newAddedItems })
     }
 
