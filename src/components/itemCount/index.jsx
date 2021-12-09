@@ -13,7 +13,6 @@ export default function ItemCount(props) {
     }, [])
     
     useEffect(() => {
-        console.log(itemCount)
         setQuantity(props.id, itemCount)
     }, [itemCount])
 

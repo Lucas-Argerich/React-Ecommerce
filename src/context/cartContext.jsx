@@ -26,10 +26,6 @@ export const CartProvider = ({ children }) => {
         totalPrice: 0
     })
 
-    useEffect(() => {
-        console.log(cart)
-    }, [cart])
-
     const addItem = (item) => {
         if (cart.addedItems.some((i) => i.item.id === item.item.id)) {
             const newAddedItems = cart.addedItems
