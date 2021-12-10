@@ -3,6 +3,8 @@ import { useParams } from 'react-router'
 import ReactLoading from 'react-loading';
 import ItemCountWithAdd from '../itemCountWithAdd';
 import { BsChevronDown } from 'react-icons/bs'
+import { db } from '../../firebase'
+import { collection, getDocs } from "firebase/firestore";
 import './index.scss'
 
 export default function ItemDetail() {
@@ -16,18 +18,15 @@ export default function ItemDetail() {
     }, [productId])
 
     async function fetchItem() {
-        setItem(await getItem())
-        setLoading(false)
-    }
-
-    const getItem = () => {
-        return new Promise((resolve, reject) => {
-            resolve(
-                fetch(`https://fakestoreapi.com/products/${productId}`)
-                    .then(res => (res.ok ? res : reject(res)))
-                    .then(res => res.json())
-            )
+        let querySnapshot = await getDocs(collection(db, "items"))
+        let itemGet = []
+        querySnapshot.forEach((doc) => {
+            itemGet.push(doc.data())
         })
+        itemGet = itemGet.find(i => i.id === productId)
+        console.log(itemGet)
+        setItem(itemGet)
+        setLoading(false)
     }
 
     return (

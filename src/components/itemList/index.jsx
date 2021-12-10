@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import Item from '../item'
 import ItemLoader from '../item/itemLoader'
+import { db } from '../../firebase'
+import { collection, getDocs } from "firebase/firestore";
 import './index.scss'
 
 export default function ItemList(props) {
@@ -33,21 +35,20 @@ export default function ItemList(props) {
 
     useEffect(() => {
         fetchData()
+        console.log(data)
     }, [])
 
     async function fetchData() {
-        setData(await getData())
-        setLoading(false)
-    }
 
-    const getData = () => {
-        return new Promise((resolve, reject) => {
-            resolve(
-                fetch(`https://fakestoreapi.com/products/category/${props.category}`)
-                    .then(res => (res.ok ? res : reject(res)))
-                    .then(res => res.json())
-            )
+        let querySnapshot = await getDocs(collection(db, "items"))
+        let dataGet = []
+        querySnapshot.forEach((doc) => {
+            dataGet.push(doc.data())
         })
+        dataGet = dataGet.filter(i => i.category === props.category)
+        console.log(dataGet)
+        setData(dataGet)
+        setLoading(false)
     }
 
     return (
