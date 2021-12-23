@@ -11,6 +11,15 @@ export const CartProvider = ({ children }) => {
     })
 
     useEffect(() => {
+        cart.totalPrice = 0
+        cart.addedItems.length != 0 ?
+            cart.addedItems.map(function (i) {
+                cart.totalPrice = cart.totalPrice + i.item.price
+            }) :
+        null
+    }, [cart])
+
+    useEffect(() => {
         console.log(cart)
     }, [cart])
 
@@ -29,8 +38,6 @@ export const CartProvider = ({ children }) => {
 
     const setQuantity = (id, quantity) => {
         const newAddedItems = cart.addedItems
-        console.log(newAddedItems)
-        console.log(newAddedItems.find(i => i.item.id === id))
         newAddedItems.find(i => i.item.id === id).quantity = quantity
         setCart({ ...cart, addedItems: newAddedItems })
     }
