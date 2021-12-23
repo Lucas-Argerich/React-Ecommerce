@@ -3,7 +3,7 @@ import { useParams } from 'react-router'
 import ReactLoading from 'react-loading';
 import ItemCountWithAdd from '../itemCountWithAdd';
 import { BsChevronDown } from 'react-icons/bs'
-import { db } from '../../firebase'
+import { db } from '../../../firebase'
 import { collection, getDocs } from "firebase/firestore";
 import './index.scss'
 

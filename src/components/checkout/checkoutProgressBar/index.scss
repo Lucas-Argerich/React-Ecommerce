@@ -1,0 +1,85 @@
+.RSPBprogressBar {
+    height: 2px;
+    line-height: 1;
+    border-radius: 10px;
+    position: relative;
+    background-color: var(--c-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 0;
+    margin-top: 90px;
+
+    .RSPBstep {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 0;
+        position: absolute;
+        transform: translateX(-50%);
+        transition-property: all;
+        transition-timing-function: ease;
+
+        .indexedStep {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            position: relative;
+
+            &::before {
+                display: block;
+                position: absolute;
+                bottom: 15px;
+                left: 50%;
+                transform: translate(-50%, 0);
+                font-size: 1.6rem;
+                color: var(--c-text-muted);
+                text-transform: capitalize;
+            }
+
+            &.index1 {
+                &::before {
+                    content: 'details'
+                }
+            }
+
+            &.index2 {
+                &::before {
+                    content: 'shipping'
+                }
+            }
+
+            &.index3 {
+                &::before {
+                    content: 'payment'
+                }
+            }
+
+            &.index4 {
+                &::before {
+                    content: 'review'
+                }
+            }
+        }
+    }
+
+    .RSPBprogressBarText {
+        color: white;
+        font-size: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .RSPBprogression {
+        position: absolute;
+        transition: width 0.3s ease;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        border-radius: 10px;
+        background: var(--c-primary);
+        z-index: -1;
+    }
+}

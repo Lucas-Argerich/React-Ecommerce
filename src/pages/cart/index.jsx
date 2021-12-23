@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
-import CartData from '../../components/cartList'
+import CheckoutForm from '../../components/checkout/checkoutForm'
+import CheckoutList from '../../components/checkout/checkoutList'
+import './index.scss'
 
 export default class Cart extends Component {
     render() {
         return (
-            <main>
-            <CartData />
+            <main className="cartContainer">
+                <CheckoutForm />
+                <CheckoutList />
             </main>
         )
     }

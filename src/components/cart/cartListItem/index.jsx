@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { BiTrash } from 'react-icons/bi'
-import ItemCount from '../itemCount'
-import { useCart } from '../../context/cartContext'
+import ItemCount from '../../item/itemCount'
+import { useCart } from '../../../context/cartContext'
 import './index.scss'
 
 export default function CartListItem(props) {

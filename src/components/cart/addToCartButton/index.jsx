@@ -1,5 +1,5 @@
 import React from 'react'
-import { useCart } from '../../context/cartContext'
+import { useCart } from '../../../context/cartContext'
 import './index.scss'
 
 export default function AddToCartButton(props) {

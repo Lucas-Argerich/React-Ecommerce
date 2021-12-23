@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
-import { useCart } from '../../context/cartContext'
+import { useCart } from '../../../context/cartContext'
 import './index.scss'
 
 export default function ItemCount(props) {

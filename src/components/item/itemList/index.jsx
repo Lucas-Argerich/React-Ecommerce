@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Item from '../item'
 import ItemLoader from '../item/itemLoader'
-import { db } from '../../firebase'
+import { db } from '../../../firebase'
 import { collection, getDocs } from "firebase/firestore";
 import './index.scss'
 

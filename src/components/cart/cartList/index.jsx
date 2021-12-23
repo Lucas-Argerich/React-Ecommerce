@@ -1,5 +1,5 @@
 import React from 'react'
-import { useCart } from '../../context/cartContext'
+import { useCart } from '../../../context/cartContext'
 import CartListItem from '../cartListItem'
 import './index.scss'
 

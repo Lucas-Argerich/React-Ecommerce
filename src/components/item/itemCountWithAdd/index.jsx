@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
-import { useCart } from '../../context/cartContext'
-import AddToCartButton from '../addToCartButton'
+import { useCart } from '../../../context/cartContext'
+import AddToCartButton from '../../cart/addToCartButton'
 import './index.scss'
 
 export default function ItemCount(props) {

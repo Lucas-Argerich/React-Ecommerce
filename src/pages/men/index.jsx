@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ItemList from '../../components/itemList'
+import ItemList from '../../components/item/itemList'
 
 export default class Men extends Component {
     render() {

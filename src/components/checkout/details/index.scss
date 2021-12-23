@@ -1,0 +1,14 @@
+.checkoutDetails {
+    display: flex;
+    flex-direction: column;
+    .checkoutButton {
+        width: 272px;
+        height: 52px;
+        background: var(--c-primary);
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        color: var(--c-light-variant);
+        margin-top: 44px;
+        cursor: pointer;
+    }
+}
