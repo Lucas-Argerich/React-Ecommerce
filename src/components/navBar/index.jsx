@@ -26,9 +26,6 @@ export default function NavBar() {
             <li>
               <Link to="React-Ecommerce/men">MEN</Link>
             </li>
-            <li>
-              <Link to="React-Ecommerce/kids">KIDS</Link>
-            </li>
           </ul>
         </div>
       </div>
