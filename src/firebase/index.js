@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app"
 import { getFirestore } from "firebase/firestore"
-import { keys } from './keys'
+import keys from './keys.js'
 
 const firebaseApp = initializeApp(keys)
 

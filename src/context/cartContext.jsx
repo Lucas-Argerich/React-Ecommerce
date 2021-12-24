@@ -1,5 +1,5 @@
 import { useState, createContext, useContext, useEffect } from "react"
-
+    
 export const CartContext = createContext()
 export const useCart = () => useContext(CartContext)
 
@@ -14,9 +14,9 @@ export const CartProvider = ({ children }) => {
         cart.totalPrice = 0
         cart.addedItems.length != 0 ?
             cart.addedItems.map(function (i) {
-                cart.totalPrice = cart.totalPrice + i.item.price
+                cart.totalPrice = cart.totalPrice + (i.item.price * i.quantity)
             }) :
-        null
+            null
     }, [cart])
 
     useEffect(() => {

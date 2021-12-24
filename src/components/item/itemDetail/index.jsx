@@ -24,7 +24,6 @@ export default function ItemDetail() {
             itemGet.push(doc.data())
         })
         itemGet = itemGet.find(i => i.id === productId)
-        console.log(itemGet)
         setItem(itemGet)
         setLoading(false)
     }

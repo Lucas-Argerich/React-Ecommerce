@@ -35,7 +35,6 @@ export default function ItemList(props) {
 
     useEffect(() => {
         fetchData()
-        console.log(data)
     }, [])
 
     async function fetchData() {
@@ -46,7 +45,6 @@ export default function ItemList(props) {
             dataGet.push(doc.data())
         })
         dataGet = dataGet.filter(i => i.category === props.category)
-        console.log(dataGet)
         setData(dataGet)
         setLoading(false)
     }
