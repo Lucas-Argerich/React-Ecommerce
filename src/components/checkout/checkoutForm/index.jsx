@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import CheckoutProgressBar from '../checkoutProgressBar'
-import Details from '../details';
-import Payment from '../payment';
-import Shipping from '../shipping';
+import Details from '../details'
+import Payment from '../payment'
+import Shipping from '../shipping'
+import Review from '../review'
 import './index.scss'
+import CheckoutList from '../checkoutList'
 
 export default class CheckoutForm extends Component {
 
@@ -98,7 +100,7 @@ export default class CheckoutForm extends Component {
     get submitButton() {
         let currentStep = this.state.currentStep;
         if (currentStep > 3) {
-            return <button className="submitButton">Submit</button>;
+            return <button className="submitButton">Confirm Order</button>;
         }
         return null;
     }
@@ -106,28 +108,34 @@ export default class CheckoutForm extends Component {
     render() {
         return (
             <div className="checkoutContainer">
-                <CheckoutProgressBar currentStep={this.state.currentStep} />
-                <Details
-                    currentStep={this.state.currentStep}
-                    next={this._next}
-                />
-                <form onSubmit={this.handleSubmit}>
-                    <Shipping
+                <div className="checkout">
+                    <CheckoutProgressBar currentStep={this.state.currentStep} />
+                    <Details
                         currentStep={this.state.currentStep}
-                        state={this.state}
-                        handleChange={this.handleChange}
+                        next={this._next}
                     />
-                    <Payment
-                        currentStep={this.state.currentStep}
-                        state={this.state}
-                        handleChange={this.handleChange}
-                    />
-                </form>
-                <div className="buttonsContainer">
-                    {this.nextButton}
-                    {this.previousButton}
-                    {this.submitButton}
+                    <form onSubmit={this.handleSubmit}>
+                        <Shipping
+                            currentStep={this.state.currentStep}
+                            state={this.state}
+                            handleChange={this.handleChange}
+                        />
+                        <Payment
+                            currentStep={this.state.currentStep}
+                            state={this.state}
+                            handleChange={this.handleChange}
+                        />
+                        <Review
+                            currentStep={this.state.currentStep}
+                        />
+                    </form>
+                    <div className="buttonsContainer">
+                        {this.nextButton}
+                        {this.submitButton}
+                        {this.previousButton}
+                    </div>
                 </div>
+                <CheckoutList />
             </div>
         )
     }

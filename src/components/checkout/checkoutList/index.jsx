@@ -8,7 +8,7 @@ export default function CheckoutList() {
 
     useEffect(() => {
         let newProductsQuantity = 0
-        cart.addedItems.map((i) => newProductsQuantity = newProductsQuantity + i.quantity )
+        cart.addedItems.map((i) => newProductsQuantity = newProductsQuantity + i.quantity)
         setProductsQuantity(newProductsQuantity)
     }, [cart])
 
@@ -16,12 +16,14 @@ export default function CheckoutList() {
         <div className="checkoutListContainer">
             <div className="checkoutList">
                 <h4>Totals</h4>
-                <ul>
-                    <li>Products: <span>{productsQuantity}</span></li>
-                    <li>Subtotal: <span>${(cart.totalPrice).toFixed(2)}</span></li>
-                    <li>Tax: <span>$0.00</span></li>
-                    <li>Shipping: <span>$19.99</span></li>
-                </ul>
+                {
+                    <ul>
+                        <li>Products: <span>{productsQuantity}</span></li>
+                        <li>Subtotal: <span>${(cart.totalPrice).toFixed(2)}</span></li>
+                        <li>Tax: <span>$0.00</span></li>
+                        <li>Shipping: <span>$19.99</span></li>
+                    </ul>
+                }
                 <h5>Total: <span>${(cart.totalPrice + 19.99).toFixed(2)}</span></h5>
             </div>
             <div className="checkoutInformation">
