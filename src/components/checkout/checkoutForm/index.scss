@@ -1,12 +1,19 @@
 .checkoutContainer {
-    display: flex;
-    justify-content: space-between;
+    padding: 10px;
+    @media (min-width:426px) {
+        display: flex;
+        justify-content: space-between;
+    }
 
     .checkoutTitle {
         font-size: 5.2rem;
         margin-top: 60px;
         text-align: left;
-        min-width: 866px;
+        min-width: 100%;
+
+        @media (min-width:1024) {
+            min-width: 866px;
+        }
     }
 
     .checkout {
@@ -61,7 +68,7 @@
 
                 &.formRadioInputs {
                     flex-direction: column;
-                    
+
                     .radioContainer {
                         display: flex;
                         transition: 200ms;
