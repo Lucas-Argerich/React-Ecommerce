@@ -1,3 +1,3 @@
-# React Ecommerce Coderhouse | Lucas Argerich
+# React Ecommerce Coderhouse | Lucas Argerich 
 
-Esta es la PRIMERA ENTREGA DEL PROYECTO FINAL.
+NOT ACTUALLY WORKING!!
